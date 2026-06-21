@@ -1,0 +1,457 @@
+
+
+* {
+
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+
+body {
+
+    font-family: 'Inter', sans-serif;
+
+    background-color: #f8fafc;
+
+    color: #1e293b;
+
+    line-height: 1.5;
+
+}
+
+
+
+
+
+.header {
+
+    background-color: #0f172a;
+
+    color: #ffffff;
+
+    padding: 25px 20px;
+
+    text-align: center;
+
+    border-bottom: 4px solid #3b82f6;
+
+}
+
+
+
+.header h1 {
+
+    font-size: 1.6rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+
+}
+
+
+
+.header p {
+
+    font-size: 0.9rem;
+
+    color: #94a3b8;
+
+    margin-top: 5px;
+
+}
+
+
+
+
+
+.legend-section {
+
+    background-color: #ffffff;
+
+    margin: 20px auto;
+
+    padding: 20px;
+
+    max-width: 1400px;
+
+    width: 90%;
+
+    border-radius: 8px;
+
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+
+}
+
+
+
+.legend-section h2 {
+
+    font-size: 1.1rem;
+
+    margin-bottom: 15px;
+
+    color: #334155;
+
+    text-align: center;
+
+}
+
+
+
+.legend-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 10px;
+
+}
+
+
+
+.legend-item {
+
+    display: flex;
+
+    align-items: center;
+
+    font-size: 0.85rem;
+
+    padding: 10px 14px;
+
+    border-radius: 6px;
+
+    font-weight: 500;
+
+    box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+
+}
+
+
+
+.legend-item span {
+
+    width: 12px;
+
+    height: 12px;
+
+    border-radius: 50%;
+
+    margin-right: 10px;
+
+    display: inline-block;
+
+    border: 1px solid rgba(0,0,0,0.1);
+
+}
+
+
+
+
+
+.table-wrapper {
+
+    width: 90%;
+
+    max-width: 1400px;
+
+    margin: 0 auto 40px auto;
+
+    overflow-x: auto; 
+
+    background-color: #ffffff;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+
+    -webkit-overflow-scrolling: touch;
+
+}
+
+
+
+
+
+.periodic-table {
+
+    display: grid;
+
+    grid-template-columns: repeat(18, minmax(70px, 1fr));
+
+    gap: 6px;
+
+    min-width: 1280px; 
+
+}
+
+
+
+
+
+.element {
+
+    border-radius: 6px;
+
+    padding: 6px 4px;
+
+    display: block; 
+
+    text-align: center;
+
+    aspect-ratio: 1 / 1.15;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+
+    border: 1px solid rgba(0,0,0,0.08);
+
+    position: relative;
+
+}
+
+
+
+.element:hover {
+
+    transform: scale(1.08);
+
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.15);
+
+    z-index: 50;
+
+    filter: brightness(0.95);
+
+}
+
+
+
+
+
+.atomic-number {
+
+    display: block;
+
+    font-size: 0.72rem;
+
+    font-weight: 700;
+
+    text-align: left;
+
+    opacity: 0.85;
+
+    line-height: 1;
+
+    margin-bottom: 2px;
+
+}
+
+
+
+.symbol {
+
+    display: block;
+
+    font-size: 1.35rem;
+
+    font-weight: 800;
+
+    line-height: 1.1;
+
+    margin: 1px 0;
+
+}
+
+
+
+.element-name {
+
+    display: block;
+
+    font-size: 0.65rem;
+
+    font-weight: 500;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    max-width: 100%;
+
+    line-height: 1.1;
+
+}
+
+
+
+.atomic-mass {
+
+    display: block;
+
+    font-size: 0.62rem;
+
+    opacity: 0.75;
+
+    line-height: 1;
+
+    margin-top: 2px;
+
+}
+
+
+
+
+
+.alkali { background-color: #ff5c5c; color: #fff; }
+
+.alkaline { background-color: #ffb07c; color: #1e293b; }
+
+.transition { background-color: #ffeb60; color: #1e293b; }
+
+.post-transition { background-color: #58a6ff; color: #fff; }
+
+.metalloid { background-color: #26c4b9; color: #fff; }
+
+.nonmetal { background-color: #2ece92; color: #fff; }
+
+.halogen { background-color: #a2e026; color: #1e293b; }
+
+.noble { background-color: #b983ff; color: #fff; }
+
+.lanthanide { background-color: #f7bade; color: #1e293b; }
+
+.actinide { background-color: #ffd09b; color: #1e293b; }
+
+
+
+
+
+.modal {
+
+    display: none;
+
+    position: fixed;
+
+    z-index: 1000;
+
+    left: 0;
+
+    top: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background-color: rgba(15, 23, 42, 0.7);
+
+    backdrop-filter: blur(4px);
+
+}
+
+
+
+.modal-content {
+
+    background-color: #ffffff;
+
+    margin: 15% auto;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    width: 90%;
+
+    max-width: 440px;
+
+    position: relative;
+
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+
+    animation: modalFade 0.2s ease-out;
+
+}
+
+
+
+@keyframes modalFade {
+
+    from { opacity: 0; transform: translateY(-10px); }
+
+    to { opacity: 1; transform: translateY(0); }
+
+}
+
+
+
+.close-btn {
+
+    position: absolute;
+
+    right: 16px;
+
+    top: 16px;
+
+    background: none;
+
+    border: none;
+
+    font-size: 1.3rem;
+
+    cursor: pointer;
+
+    color: #64748b;
+
+}
+
+
+
+
+
+footer {
+
+    background-color: #0f172a;
+
+    color: #94a3b8;
+
+    padding: 25px 20px;
+
+    text-align: center;
+
+    border-top: 1px solid #1e293b;
+
+    margin-top: auto;
+
+}
+
+
+
+footer strong {
+
+    color: #ffffff;
+
+    font-size: 0.95rem;
+
+}
+
+
+
+footer p {
+
+    font-size: 0.75rem;
+
+    margin-top: 5px;
+
+}
